@@ -11,16 +11,15 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - npm install
-      - npm install unit.js
   build:
+    on-failure: ABORT
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
-      - mocha test/test.js
+      - CI=true npm run test
   post_build:
     commands:
       - echo Build completed on `date`
-
 artifacts:
   files:
     - server.js
