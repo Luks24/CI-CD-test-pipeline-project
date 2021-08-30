@@ -5,21 +5,22 @@ phases:
     runtime-versions:
       nodejs: 10  
     commands:
-      - echo Installing Mocha globally...
+      - echo Installing Mocha...
       - npm install -g mocha
   pre_build:
     commands:
-      - echo Installing dependencies...
+      - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
   build:
     commands:
       - echo Build started on `date`
-      - echo Run Unit Tests and so on 
-      - npm run test
+      - echo Compiling the Node.js code
+      - mocha test.js
   post_build:
     commands:
       - echo Build completed on `date`
+
 artifacts:
   files:
     - server.js
