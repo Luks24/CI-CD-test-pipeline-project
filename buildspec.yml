@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10  
+    commands:
+      - echo Installing Mocha globally...
+      - npm install -g mocha
+  pre_build:
+    commands:
+      - echo Installing dependencies...
+      - npm install
+      - npm install unit.js
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Run Unit Tests and so on 
+      - npm run test
+      - npm run lint
+  post_build:
+    commands:
+      - echo Build completed on `date
