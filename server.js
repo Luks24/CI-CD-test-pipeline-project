@@ -13,16 +13,25 @@ function getTime(){
     const isoDate = date.toISOString();
     return isoDate;
 }
+
+function getFunnyQuote(){
+    return textArray[Math.floor(Math.random() * textArray.length)]
+}
 // App
 const app = express();
 app.get("/:accountId/data", (req, res, next) => {
     res.json({
         accountId: req.params.accountId,
         timestamp: getTime(),
-        data: textArray[Math.floor(Math.random() * textArray.length)], 
+        data: getFunnyQuote() 
     });
    });
 
 app.listen(80, function(){
     console.log("App running");
 });
+
+module.exports = {
+    getTime,
+    getFunnyQuote
+}
