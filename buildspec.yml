@@ -17,7 +17,6 @@ phases:
       - echo Build started on `date`
       - echo Run Unit Tests and so on 
       - npm run test
-      - npm run lint
   post_build:
     commands:
       - echo Build completed on `date
