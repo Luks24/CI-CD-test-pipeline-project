@@ -20,8 +20,8 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-  artifacts:
-    files:
-      - server.js
-      - package.json
-      - Dockerfile
+artifacts:
+  files:
+    - server.js
+    - package.json
+    - Dockerfile
