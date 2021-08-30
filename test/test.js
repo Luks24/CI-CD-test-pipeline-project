@@ -9,6 +9,6 @@ describe("testing if data is displayed", function(){
  })
 
  it("check if there is a value in timestamp", function(){
-    assert.isNumber(server.getTime());
+    assert.isString(server.getTime());
 })
 });
