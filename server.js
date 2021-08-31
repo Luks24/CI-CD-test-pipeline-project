@@ -21,7 +21,7 @@ function getFunnyQuote(){
 const app = express();
 
 app.get("/", (req, res, next) => {
-    res.send("Hello and welcome to my DevOps Assignment :)")
+    res.send("Hello and welcome to my DevOps Assignments final version :)")
 })
 
 app.get("/:accountId/data", (req, res, next) => {
