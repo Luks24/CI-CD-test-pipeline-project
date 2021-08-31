@@ -14,7 +14,7 @@ function getTime(){
     return isoDate;
 }
 
-function getFunnyQuote(){
+funtion getFunnyQuote(){
     return textArray[Math.floor(Math.random() * textArray.length)]
 }
 // App
