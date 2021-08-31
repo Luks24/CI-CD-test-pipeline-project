@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       docker: 19 
 
-  pre-build:
+  pre_build:
     commands:
       - docker build -t nodeServer
   build:
