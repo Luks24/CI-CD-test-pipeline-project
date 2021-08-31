@@ -3,14 +3,18 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      docker: 18 
+      docker: 19 
+
+  pre-build:
+    commands:
+      - docker build -t nodeServer
   build:
     on-failure: ABORT
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - pwd
-      - docker build ./Dockerfile
+      - docker build nodeServer
   post_build:
     commands:
       - echo Build completed on `date`
