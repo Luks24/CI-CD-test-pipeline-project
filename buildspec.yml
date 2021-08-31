@@ -16,11 +16,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
+      - docker build Dockerfile
   post_build:
     commands:
       - echo Build completed on `date`
-artifacts:
-  files:
-    - server.js
-    - package.json
-    - Dockerfile
+
