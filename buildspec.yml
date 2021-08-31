@@ -9,7 +9,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
-      - docker build Dockerfile
+      - pwd
+      - docker build ./Dockerfile
   post_build:
     commands:
       - echo Build completed on `date`
