@@ -19,6 +19,11 @@ function getFunnyQuote(){
 }
 // App
 const app = express();
+
+app.get("/", (req, res, next) => {
+    res.send("Hello nad welcome to my Assignment :)")
+})
+
 app.get("/:accountId/data", (req, res, next) => {
     res.json({
         accountId: req.params.accountId,
